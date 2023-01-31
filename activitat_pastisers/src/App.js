@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-
+import './style/Carta.css'
 function App() {
   return (
     <div className="App">
@@ -22,15 +21,15 @@ function App() {
 const Imagen = () => {
   return(
   <div>
-    <img src="Imagenes/espagetis.jpg"></img>
+    <img src="Imagenes/espagetis.jpg" width={150} height={150} alt={"Espaguetis al pesto con una rica cerveza de fondo"} ></img>
   </div>)
 }
 /* Componente que devuelce informacion del trabajador utilizando props, los props se definen en App */
 const Info = (props) => {
   return(
     <div>
-      <p>{props.name}</p>
-      <p>{props.job}</p>
+      <p className='text-bold'>{props.name}</p>
+      <p className='text-bold'>{props.job}</p>
       <p>{props.description}</p>
     </div>
   )
