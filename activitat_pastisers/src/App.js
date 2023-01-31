@@ -1,5 +1,9 @@
 import './App.css';
 import './style/Carta.css'
+/* Importo el componente Imagen del fichero Imagen para usarlo en la funcion App()*/ 
+import {Imagen}  from './Components/Imagen'
+/* Importo el componente Info del fichero Info_Past para usarlo en la funcion App()*/
+import {Info} from'./Components/Info_Past'
 function App() {
   return (
     <div className="App">
@@ -16,22 +20,5 @@ function App() {
       </div>
     </div>
   );
-}
-/* Componente que devuelve una imagen */
-const Imagen = () => {
-  return(
-  <div>
-    <img src="Imagenes/espagetis.jpg" width={150} height={150} alt={"Espaguetis al pesto con una rica cerveza de fondo"} ></img>
-  </div>)
-}
-/* Componente que devuelce informacion del trabajador utilizando props, los props se definen en App */
-const Info = (props) => {
-  return(
-    <div>
-      <p className='text-bold'>{props.name}</p>
-      <p className='text-bold'>{props.job}</p>
-      <p>{props.description}</p>
-    </div>
-  )
 }
 export default App;
